@@ -30,7 +30,7 @@ process METAPHLAN_MAKEDB {
     """
     stub:
     """
-    mkdir metaphlan_db_latest
+    mkdir -p metaphlan_db_latest
     touch metaphlan_db_latest/mpa_latest
     touch metaphlan_db_latest/mpa_v31_CHOCOPhlAn_201901.1.bt2
     touch metaphlan_db_latest/mpa_v31_CHOCOPhlAn_201901.2.bt2

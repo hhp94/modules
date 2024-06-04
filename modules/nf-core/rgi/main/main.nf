@@ -59,7 +59,7 @@ process RGI_MAIN {
         --output_file $prefix \\
         --input_sequence $fasta
 
-    mkdir temp/
+    mkdir -p temp/
     for FILE in *.xml *.fsa *.{nhr,nin,nsq} *.draft *.potentialGenes *{variant,rrna,protein,predictedGenes,overexpression,homolog}.json; do [[ -e \$FILE ]] && mv \$FILE temp/; done
 
     RGI_VERSION=\$(rgi main --version)

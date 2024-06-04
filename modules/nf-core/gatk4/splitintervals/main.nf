@@ -49,7 +49,7 @@ process GATK4_SPLITINTERVALS {
     stub:
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     touch ${prefix}/0000-scattered.interval_list
     touch ${prefix}/0001-scattered.interval_list
 

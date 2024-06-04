@@ -23,7 +23,7 @@ process UNTAR {
     prefix    = task.ext.prefix ?: ( meta.id ? "${meta.id}" : archive.baseName.toString().replaceFirst(/\.tar$/, ""))
 
     """
-    mkdir $prefix
+    mkdir -p $prefix
 
     ## Ensures --strip-components only applied when top level of tar contents is a directory
     ## If just files or multiple directories, place all in prefix
@@ -52,7 +52,7 @@ process UNTAR {
     stub:
     prefix    = task.ext.prefix ?: ( meta.id ? "${meta.id}" : archive.toString().replaceFirst(/\.[^\.]+(.gz)?$/, ""))
     """
-    mkdir $prefix
+    mkdir -p $prefix
     touch ${prefix}/file.txt
 
     cat <<-END_VERSIONS > versions.yml

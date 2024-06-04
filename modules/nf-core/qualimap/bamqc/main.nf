@@ -57,8 +57,8 @@ process QUALIMAP_BAMQC {
     prefix = task.ext.suffix ? "${meta.id}${task.ext.suffix}" : "${meta.id}"
     """
     mkdir -p $prefix/css
-    mkdir $prefix/images_qualimapReport
-    mkdir $prefix/raw_data_qualimapReport
+    mkdir -p $prefix/images_qualimapReport
+    mkdir -p $prefix/raw_data_qualimapReport
     cd $prefix/css
     touch agogo.css
     touch basic.css

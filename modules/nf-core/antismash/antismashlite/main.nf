@@ -74,8 +74,8 @@ process ANTISMASH_ANTISMASHLITE {
     def VERSION = '7.1.0' // WARN: Version information not provided by tool during stub run. Please update this string when bumping container versions.
     """
     mkdir -p ${prefix}/css
-    mkdir ${prefix}/images
-    mkdir ${prefix}/js
+    mkdir -p ${prefix}/images
+    mkdir -p ${prefix}/js
     touch ${prefix}/NZ_CP069563.1.region001.gbk
     touch ${prefix}/NZ_CP069563.1.region002.gbk
     touch ${prefix}/css/bacteria.css

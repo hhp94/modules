@@ -29,7 +29,7 @@ process MAXBIN2 {
     def prefix = task.ext.prefix ?: "${meta.id}"
     def associate_files = reads ? "-reads $reads" : "-abund $abund"
     """
-    mkdir input/ && mv $contigs input/
+    mkdir -p input/ && mv $contigs input/
     run_MaxBin.pl \\
         -contig input/$contigs \\
         $associate_files \\

@@ -67,7 +67,7 @@ process STITCH {
     def args                 = task.ext.args        ?: ""
     def args2                = task.ext.args2       ?: ""
     def generate_input_only  = args2.contains( "--generateInputOnly TRUE" )
-    def generate_plots_cmd   = !generate_input_only ? "mkdir plots"                                                                   : ""
+    def generate_plots_cmd   = !generate_input_only ? "mkdir -p plots"                                                                   : ""
     def generate_vcf_cmd     = !generate_input_only ? "touch ${prefix}.vcf.gz"                                                        : ""
     def rsync_version_cmd    = rdata                ? "rsync: \$(rsync --version | head -n1 | sed 's/^rsync  version //; s/ .*\$//')" : ""
     """

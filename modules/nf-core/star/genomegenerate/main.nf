@@ -25,7 +25,7 @@ process STAR_GENOMEGENERATE {
     def include_gtf = gtf ? "--sjdbGTFfile $gtf" : ''
     if (args_list.contains('--genomeSAindexNbases')) {
         """
-        mkdir star
+        mkdir -p star
         STAR \\
             --runMode genomeGenerate \\
             --genomeDir star/ \\
@@ -47,7 +47,7 @@ process STAR_GENOMEGENERATE {
         samtools faidx $fasta
         NUM_BASES=`gawk '{sum = sum + \$2}END{if ((log(sum)/log(2))/2 - 1 > 14) {printf "%.0f", 14} else {printf "%.0f", (log(sum)/log(2))/2 - 1}}' ${fasta}.fai`
 
-        mkdir star
+        mkdir -p star
         STAR \\
             --runMode genomeGenerate \\
             --genomeDir star/ \\
@@ -70,7 +70,7 @@ process STAR_GENOMEGENERATE {
     stub:
     if (gtf) {
         """
-        mkdir star
+        mkdir -p star
         touch star/Genome
         touch star/Log.out
         touch star/SA
@@ -97,7 +97,7 @@ process STAR_GENOMEGENERATE {
         """
     } else {
         """
-        mkdir star
+        mkdir -p star
         touch star/Genome
         touch star/Log.out
         touch star/SA

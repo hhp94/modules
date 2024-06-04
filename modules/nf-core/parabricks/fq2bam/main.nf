@@ -68,7 +68,7 @@ process PARABRICKS_FQ2BAM {
     def interval_file_command = interval_file ? interval_file.collect{"--interval-file $it"}.join(' ') : ""
     def metrics_output_command = args = "--out-duplicate-metrics duplicate-metrics.txt" ? "touch duplicate-metrics.txt" : ""
     def known_sites_output_command = known_sites ? "touch ${prefix}.table" : ""
-    def qc_metrics_output_command = args = "--out-qc-metrics-dir qc_metrics " ? "mkdir qc_metrics && touch qc_metrics/alignment.txt" : ""
+    def qc_metrics_output_command = args = "--out-qc-metrics-dir qc_metrics " ? "mkdir -p qc_metrics && touch qc_metrics/alignment.txt" : ""
     """
     touch ${prefix}.bam
     touch ${prefix}.bam.bai

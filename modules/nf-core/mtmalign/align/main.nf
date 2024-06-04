@@ -57,7 +57,7 @@ process MTMALIGN_ALIGN {
     stub:
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir mTM_result
+    mkdir -p mTM_result
     touch mTM_result/${prefix}.aln${compress ? '.gz' : ''}
     touch mTM_result/${prefix}.pdb${compress ? '.gz' : ''}
 

@@ -35,7 +35,7 @@ process MUDSKIPPER_INDEX {
     stub:
     def args = task.ext.args ?: ''
     """
-    mkdir index/
+    mkdir -p index/
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

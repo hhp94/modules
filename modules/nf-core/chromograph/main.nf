@@ -85,7 +85,7 @@ process CHROMOGRAPH {
         prefix             = task.ext.prefix ?: "${meta7.id}"
     }
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

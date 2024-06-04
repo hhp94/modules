@@ -30,7 +30,7 @@ process FASTQSCREEN_BUILDFROMINDEX {
         .replace("\n", "\\n")
 
     """
-    mkdir $dir
+    mkdir -p $dir
     $copy_indexes
 
     echo "$config" > fastq_screen.conf
@@ -58,7 +58,7 @@ process FASTQSCREEN_BUILDFROMINDEX {
     stub:
     dir = "FastQ_Screen_Genomes"
     """
-    mkdir $dir
+    mkdir -p $dir
     touch $dir/fastq_screen.conf
 
     cat <<-END_VERSIONS > versions.yml

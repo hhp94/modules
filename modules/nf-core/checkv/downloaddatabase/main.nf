@@ -33,16 +33,16 @@ process CHECKV_DOWNLOADDATABASE {
     prefix = task.ext.prefix ?: "checkv_db"
 
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     touch ${prefix}/README.txt
-    mkdir ${prefix}/genome_db
+    mkdir -p ${prefix}/genome_db
     touch ${prefix}/genome_db/changelog.tsv
     touch ${prefix}/genome_db/checkv_error.tsv
     touch ${prefix}/genome_db/checkv_info.tsv
     touch ${prefix}/genome_db/checkv_reps.faa
     touch ${prefix}/genome_db/checkv_reps.fna
     touch ${prefix}/genome_db/checkv_reps.tsv
-    mkdir ${prefix}/hmm_db
+    mkdir -p ${prefix}/hmm_db
     touch ${prefix}/hmm_db/checkv_hmms.tsv
     touch ${prefix}/hmm_db/genome_lengths.tsv
 

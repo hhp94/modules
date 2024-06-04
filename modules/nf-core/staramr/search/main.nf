@@ -51,7 +51,7 @@ process STARAMR_SEARCH {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}_results
+    mkdir -p ${prefix}_results
     touch ${prefix}_results/results.xlsx
     touch ${prefix}_results/{summary,detailed_summary,resfinder,pointfinder,plasmidfinder,mlst}.tsv.gz
     touch ${prefix}_results/settings.txt.gz

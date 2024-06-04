@@ -59,7 +59,7 @@ process COBRAMETA {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     echo "" | gzip > ${prefix}/COBRA_all_assemblies.fasta.gz
     echo "" | gzip > ${prefix}/COBRA_category_i_self_circular.fasta.gz
     echo "" | gzip > ${prefix}/COBRA_category_ii-a_extended_circular_unique.fasta.gz

@@ -53,7 +53,7 @@ process QUALIMAP_RNASEQ {
     stub:
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

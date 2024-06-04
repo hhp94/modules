@@ -47,7 +47,7 @@ process DEEPTMHMM {
     def args = task.ext.args ?: ''
 
     """
-    mkdir biolib_results
+    mkdir -p biolib_results
     touch biolib_results/TMRs.gff3
     touch biolib_results/predicted_topologies.3line
     touch biolib_results/deeptmhmm_results.md

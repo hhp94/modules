@@ -30,7 +30,7 @@ process MAXQUANT_LFQ {
     END_VERSIONS
     sed \"s_<numThreads>.*_<numThreads>$task.cpus</numThreads>_\" ${paramfile} > mqpar_changed.xml
     sed -i \"s|PLACEHOLDER|\$PWD/|g\" mqpar_changed.xml
-    mkdir temp
+    mkdir -p temp
     maxquant mqpar_changed.xml
     mv combined/txt/*.txt .
     """

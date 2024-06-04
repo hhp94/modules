@@ -57,7 +57,7 @@ for i in $(seq 4) ; do ; rename L00$i L001 $MFC/fc$i/*; done
 
 ```
 MPX=fastq_multiplexed
-mkdir $MPX
+mkdir -p $MPX
 for f in $INPUT_DIR/*.fastq.gz; do ; ln $f $MPX; done
 for i in $(seq 4) ; do ; rename S1_L00$i S${i}_L001 $MPX/* ; done
 ```
@@ -65,7 +65,7 @@ for i in $(seq 4) ; do ; rename S1_L00$i S${i}_L001 $MPX/* ; done
 4. Concatenate files
 
 ```
-mkdir fastq_cat
+mkdir -p fastq_cat
 cat $INPUT_DIR/*_R1_*.fastq.gz > fastq_cat/10k_PBMC_3p_nextgem_Chromium_X_S1_L001_R1_001.fastq.gz
 cat $INPUT_DIR/*_R2_*.fastq.gz > fastq_cat/10k_PBMC_3p_nextgem_Chromium_X_S1_L001_R2_001.fastq.gz
 ```

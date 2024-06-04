@@ -40,7 +40,7 @@ process AMRFINDERPLUS_RUN {
     fi
 
     if [ "$is_compressed_db" == "true" ]; then
-        mkdir amrfinderdb
+        mkdir -p amrfinderdb
         tar xzvf $db -C amrfinderdb
     else
         mv $db amrfinderdb

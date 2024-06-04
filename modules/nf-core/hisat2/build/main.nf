@@ -46,7 +46,7 @@ process HISAT2_BUILD {
     }
     def VERSION = '2.2.1' // WARN: Version information not provided by tool on CLI. Please update this string when bumping container versions.
     """
-    mkdir hisat2
+    mkdir -p hisat2
     $extract_exons
     hisat2-build \\
         -p $task.cpus \\

@@ -32,7 +32,7 @@ process PHYLOFLASH {
             -dbhome . \\
             -CPUs $task.cpus
 
-        mkdir $prefix
+        mkdir -p $prefix
         mv ${prefix}.* $prefix
 
         cat <<-END_VERSIONS > versions.yml
@@ -50,7 +50,7 @@ process PHYLOFLASH {
             -dbhome . \\
             -CPUs $task.cpus
 
-        mkdir $prefix
+        mkdir -p $prefix
         mv ${prefix}.* $prefix
 
         cat <<-END_VERSIONS > versions.yml
@@ -63,7 +63,7 @@ process PHYLOFLASH {
     stub:
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     touch ${prefix}/${prefix}.SSU.collection.fasta
     touch ${prefix}/${prefix}.phyloFlash
 

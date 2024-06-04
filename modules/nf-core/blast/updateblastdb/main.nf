@@ -21,7 +21,7 @@ process BLAST_UPDATEBLASTDB {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}; cd ${prefix}
+    mkdir -p ${prefix}; cd ${prefix}
 
     update_blastdb.pl \\
         ${name} \\
@@ -39,7 +39,7 @@ process BLAST_UPDATEBLASTDB {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     touch ${prefix}/${name}.ndb
 
     cat <<-END_VERSIONS > versions.yml

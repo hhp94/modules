@@ -34,7 +34,7 @@ process PEKA {
     # If the modification date and time of the fai is before the fasta then
     # there will be an error. Touching the file first avoids that.
     touch $fai
-    mkdir tmp
+    mkdir -p tmp
     TMPDIR=\$(pwd)/tmp peka \
         -i $peaks \
         -x $crosslinks \

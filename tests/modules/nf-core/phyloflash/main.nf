@@ -11,7 +11,7 @@ process STUB_PHYLOFLASH_DATABASE {
 
     stub:
     """
-    mkdir ref
+    mkdir -p ref
     touch UniVec
     """
 }

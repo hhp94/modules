@@ -27,7 +27,7 @@ process GENOMAD_DOWNLOAD {
 
     stub:
     """
-    mkdir genomad_db
+    mkdir -p genomad_db
     touch genomad_db/genomad_db
     touch genomad_db/genomad_db.dbtype
     touch genomad_db/genomad_db.index

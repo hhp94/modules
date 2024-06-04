@@ -44,7 +44,7 @@ process MALT_BUILD {
     def args = task.ext.args ?: ''
     """
     touch malt-build.log
-    mkdir malt_index/
+    mkdir -p malt_index/
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

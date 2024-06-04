@@ -47,7 +47,7 @@ process SALMON_INDEX {
 
     stub:
     """
-    mkdir salmon
+    mkdir -p salmon
     touch salmon/complete_ref_lens.bin
     touch salmon/ctable.bin
     touch salmon/ctg_offsets.bin

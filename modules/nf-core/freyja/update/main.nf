@@ -36,7 +36,7 @@ process FREYJA_UPDATE {
 
     stub:
     """
-    mkdir $db_name
+    mkdir -p $db_name
 
     touch "${db_name}/usher_barcodes.csv"
     touch "${db_name}/lineages.yml"

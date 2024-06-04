@@ -35,7 +35,7 @@ process SRATOOLS_PREFETCH {
 
     stub:
     """
-    mkdir $id
+    mkdir -p $id
     touch $id/${id}.sra
 
     cat <<-END_VERSIONS > versions.yml

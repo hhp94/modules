@@ -21,7 +21,7 @@ process CONCOCT_EXTRACTFASTABINS {
     def args   = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
 
     extract_fasta_bins.py \\
         $args \\

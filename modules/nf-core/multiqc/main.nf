@@ -43,7 +43,7 @@ process MULTIQC {
 
     stub:
     """
-    mkdir multiqc_data
+    mkdir -p multiqc_data
     touch multiqc_plots
     touch multiqc_report.html
 

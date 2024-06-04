@@ -40,7 +40,7 @@ process KMCP_COMPUTE {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir $prefix
+    mkdir -p $prefix
     touch $prefix/_info.txt
 
     cat <<-END_VERSIONS > versions.yml

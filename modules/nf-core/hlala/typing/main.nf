@@ -30,11 +30,11 @@ process HLALA_TYPING {
     def prefix = task.ext.prefix ?: "${meta.id}"
 
     """
-    mkdir graphs
+    mkdir -p graphs
     mv $graph graphs
     mv graphs /usr/local/opt/hla-la/
 
-    mkdir $prefix
+    mkdir -p $prefix
 
     /usr/local/opt/hla-la/src/HLA-LA.pl \\
         --BAM $bam \\
@@ -53,8 +53,8 @@ process HLALA_TYPING {
     stub:
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
-    mkdir ${prefix}/hla
+    mkdir -p ${prefix}
+    mkdir -p ${prefix}/hla
     echo stub > ${prefix}/extraction.bam
     echo stub > ${prefix}/extraction.bam.bai
     echo stub > ${prefix}/extraction_mapped.bam

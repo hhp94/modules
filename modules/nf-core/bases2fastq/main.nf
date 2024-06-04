@@ -44,9 +44,9 @@ process BASES2FASTQ {
 
     stub:
     """
-    mkdir output
-    mkdir output/Samples
-    mkdir output/Samples/DefaultSample
+    mkdir -p output
+    mkdir -p output/Samples
+    mkdir -p output/Samples/DefaultSample
 
     touch output/Metrics.csv
     touch output/RunManifest.json

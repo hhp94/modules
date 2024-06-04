@@ -28,7 +28,7 @@ process RGI_CARDANNOTATION {
 
     DB_VERSION=\$(ls card_database_*_all.fasta | sed "s/card_database_v\\([0-9].*[0-9]\\).*/\\1/")
 
-    mkdir card_database_processed
+    mkdir -p card_database_processed
     mv card*.fasta card_database_processed
     cp ${card}/* card_database_processed
 
@@ -46,7 +46,7 @@ process RGI_CARDANNOTATION {
     touch card.fasta
     touch card_all.fasta
 
-    mkdir card_database_processed
+    mkdir -p card_database_processed
     mv card*.fasta card_database_processed
 
     RGI_VERSION=\$(rgi main --version)

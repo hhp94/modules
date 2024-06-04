@@ -21,7 +21,7 @@ process MMSEQS_DATABASES {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: 'mmseqs_database'
     """
-    mkdir ${prefix}/
+    mkdir -p ${prefix}/
 
     mmseqs databases \\
         ${database} \\
@@ -40,7 +40,7 @@ process MMSEQS_DATABASES {
     stub:
     prefix = task.ext.prefix ?: 'mmseqs_database'
     """
-    mkdir ${prefix}/
+    mkdir -p ${prefix}/
 
     touch ${prefix}/database
     touch ${prefix}/database.dbtype

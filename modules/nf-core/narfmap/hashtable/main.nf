@@ -22,7 +22,7 @@ process NARFMAP_HASHTABLE {
     script:
     def args = task.ext.args ?: ''
     """
-    mkdir narfmap
+    mkdir -p narfmap
     dragen-os \\
         --build-hash-table true \\
         --ht-reference $fasta \\
@@ -38,7 +38,7 @@ process NARFMAP_HASHTABLE {
 
     stub:
     """
-    mkdir narfmap
+    mkdir -p narfmap
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

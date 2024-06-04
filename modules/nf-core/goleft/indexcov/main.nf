@@ -41,7 +41,7 @@ process GOLEFT_INDEXCOV {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir "${prefix}"
+    mkdir -p "${prefix}"
     touch "${prefix}/${prefix}-indexcov.bed.gz"
 
     cat <<-END_VERSIONS > versions.yml

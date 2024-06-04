@@ -49,7 +49,7 @@ process PARAPHASE {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}_paraphase_vcfs
+    mkdir -p ${prefix}_paraphase_vcfs
 
     touch ${prefix}.paraphase.json
     touch ${prefix}.paraphase.bam

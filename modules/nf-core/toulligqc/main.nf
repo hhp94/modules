@@ -46,8 +46,8 @@ process TOULLIGQC {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
-    mkdir ${prefix}/images
+    mkdir -p ${prefix}
+    mkdir -p ${prefix}/images
     touch ${prefix}/report.data
     touch ${prefix}/images/Correlation_between_read_length_and_PHRED_score.html
     touch ${prefix}/images/Distribution_of_read_lengths.html

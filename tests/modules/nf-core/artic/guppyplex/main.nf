@@ -13,7 +13,7 @@ process STAGE_FASTQ_DIR {
 
     script:
     """
-    mkdir fastq
+    mkdir -p fastq
     mv ${fastq_file} fastq
     """
 }

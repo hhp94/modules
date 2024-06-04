@@ -28,7 +28,7 @@ process GALAH {
         error "Invalid qc_format supplied! qc_format should be either 'checkm' or 'genome_info'."
     }
     """
-    mkdir ${prefix}-dereplicated
+    mkdir -p ${prefix}-dereplicated
 
     galah cluster \\
         --threads ${task.cpus} \\
@@ -47,7 +47,7 @@ process GALAH {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}-dereplicated/
+    mkdir -p ${prefix}-dereplicated/
     touch ${prefix}-dereplicated/test.fa
     touch ${prefix}-dereplicated_bins.tsv
 

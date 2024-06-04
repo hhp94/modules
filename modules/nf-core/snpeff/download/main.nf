@@ -41,7 +41,7 @@ process SNPEFF_DOWNLOAD {
 
     stub:
     """
-    mkdir ${genome}.${cache_version}
+    mkdir -p ${genome}.${cache_version}
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

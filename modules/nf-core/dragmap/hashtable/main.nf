@@ -20,7 +20,7 @@ process DRAGMAP_HASHTABLE {
     script:
     def args = task.ext.args ?: ''
     """
-    mkdir dragmap
+    mkdir -p dragmap
     dragen-os \\
         --build-hash-table true \\
         --ht-reference $fasta \\
@@ -36,7 +36,7 @@ process DRAGMAP_HASHTABLE {
 
     stub:
     """
-    mkdir dragmap
+    mkdir -p dragmap
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

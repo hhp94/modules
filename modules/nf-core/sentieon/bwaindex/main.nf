@@ -33,7 +33,7 @@ process SENTIEON_BWAINDEX {
     """
     $fix_ld_library_path
 
-    mkdir bwa
+    mkdir -p bwa
 
     sentieon \\
         bwa index \\
@@ -61,7 +61,7 @@ process SENTIEON_BWAINDEX {
     """
     $fix_ld_library_path
 
-    mkdir bwa
+    mkdir -p bwa
 
     touch bwa/genome.amb
     touch bwa/genome.ann

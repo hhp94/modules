@@ -56,18 +56,18 @@ process GENOMAD_ENDTOEND {
     def prefix = task.ext.prefix ?: "${meta.id}"
     def filename = "${fasta}"[0..<"${fasta}".lastIndexOf('.')]
     """
-    mkdir ${filename}_aggregated_classification
+    mkdir -p ${filename}_aggregated_classification
     touch ${filename}_aggregated_classification/${filename}_aggregated_classification.tsv
-    mkdir ${filename}_annotate
+    mkdir -p ${filename}_annotate
     touch ${filename}_annotate/${filename}_taxonomy.tsv
-    mkdir ${filename}_find_proviruses
+    mkdir -p ${filename}_find_proviruses
     touch ${filename}_find_proviruses/${filename}_provirus.tsv
-    mkdir ${filename}_marker_classification
-    mkdir ${filename}_nn_classification
-    mkdir ${filename}_score_calibration
+    mkdir -p ${filename}_marker_classification
+    mkdir -p ${filename}_nn_classification
+    mkdir -p ${filename}_score_calibration
     touch ${filename}_score_calibration/${filename}_calibrated_aggregated_classification.tsv
     touch ${filename}_score_calibration/${filename}_compositions.tsv
-    mkdir ${filename}_summary
+    mkdir -p ${filename}_summary
     touch ${filename}_summary/${filename}_plasmid.fna.gz
     touch ${filename}_summary/${filename}_plasmid_genes.tsv
     touch ${filename}_summary/${filename}_plasmid_proteins.faa.gz

@@ -29,7 +29,7 @@ process GATK4_INTERVALLISTTOOLS {
     }
     """
 
-    mkdir ${prefix}_split
+    mkdir -p ${prefix}_split
 
     gatk --java-options "-Xmx${avail_mem}M -XX:-UsePerfData" \\
         IntervalListTools \\

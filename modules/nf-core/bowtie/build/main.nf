@@ -20,7 +20,7 @@ process BOWTIE_BUILD {
     script:
     def args = task.ext.args ?: ''
     """
-    mkdir bowtie
+    mkdir -p bowtie
     bowtie-build --threads $task.cpus $fasta bowtie/${fasta.baseName}
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

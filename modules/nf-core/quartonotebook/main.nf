@@ -67,7 +67,7 @@ process QUARTONOTEBOOK {
     ${indentCodeBlock(params_cmd, 4)}
 
     # Create output directory
-    mkdir artifacts
+    mkdir -p artifacts
 
     # Set environment variables needed for Quarto rendering
     export XDG_CACHE_HOME="./.xdg_cache_home"

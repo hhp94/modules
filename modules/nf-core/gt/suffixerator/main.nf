@@ -23,7 +23,7 @@ process GT_SUFFIXERATOR {
     def args        = task.ext.args     ?: ''
     prefix          = task.ext.prefix   ?: "${meta.id}"
     """
-    mkdir \\
+    mkdir -p \\
         "$prefix"
 
     gt \\
@@ -45,7 +45,7 @@ process GT_SUFFIXERATOR {
     prefix          = task.ext.prefix   ?: "${meta.id}"
     def touch_ssp   = mode == "protein" ? "touch $prefix/suffixerator.ssp" : ''
     """
-    mkdir \\
+    mkdir -p \\
         "$prefix"
 
     touch "$prefix/suffixerator.esq"

@@ -22,7 +22,7 @@ process BWAMEME_INDEX {
     def prefix = task.ext.prefix ?: "${fasta}"
     def VERSION = '1.0.6' // WARN: Version information provided by tool on CLI is incorrect. Please update this string when bumping container versions.
     """
-    mkdir bwameme
+    mkdir -p bwameme
 
     bwa-meme index \\
         $args \\
@@ -42,7 +42,7 @@ process BWAMEME_INDEX {
     def prefix = task.ext.prefix ?: "${fasta}"
     def VERSION = '1.0.6' // WARN: Version information provided by tool on CLI is incorrect. Please update this string when bumping container versions.
     """
-    mkdir bwameme
+    mkdir -p bwameme
     touch bwameme/${prefix}.0123
     touch bwameme/${prefix}.ann
     touch bwameme/${prefix}.pac

@@ -24,10 +24,10 @@ process ELPREP_SPLIT {
 
     """
     # create directory and move all input so elprep can find and merge them before splitting
-    mkdir input
+    mkdir -p input
     mv ${bam} input/
 
-    mkdir ${prefix}
+    mkdir -p ${prefix}
 
     elprep split \\
         input \\

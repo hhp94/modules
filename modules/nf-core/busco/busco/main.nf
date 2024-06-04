@@ -58,7 +58,7 @@ process BUSCO_BUSCO {
 
     # Ensure the input is uncompressed
     INPUT_SEQS=input_seqs
-    mkdir "\$INPUT_SEQS"
+    mkdir -p "\$INPUT_SEQS"
     cd "\$INPUT_SEQS"
     for FASTA in ../tmp_input/*; do
         if [ "\${FASTA##*.}" == 'gz' ]; then

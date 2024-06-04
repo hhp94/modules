@@ -37,7 +37,7 @@ process ENSEMBLVEP_DOWNLOAD {
     stub:
     prefix = task.ext.prefix ?: 'vep_cache'
     """
-    mkdir $prefix
+    mkdir -p $prefix
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

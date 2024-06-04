@@ -32,7 +32,7 @@ process WITTYER {
 
     // dotnet /opt/Wittyer/Wittyer.dll might need to be replaced with new docker image
     """
-    mkdir bench
+    mkdir -p bench
 
     dotnet /opt/Wittyer/Wittyer.dll \\
         --truthVcf=${truth_vcf} \\

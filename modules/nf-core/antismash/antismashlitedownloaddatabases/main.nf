@@ -58,8 +58,8 @@ process ANTISMASH_ANTISMASHLITEDOWNLOADDATABASES {
 
     echo "$cp_cmd"
 
-    mkdir antismash_dir
-    mkdir antismash_db
+    mkdir -p antismash_dir
+    mkdir -p antismash_db
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

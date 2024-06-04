@@ -80,7 +80,7 @@ process SALMON_QUANT {
     stub:
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     touch ${prefix}_meta_info.json
 
     cat <<-END_VERSIONS > versions.yml

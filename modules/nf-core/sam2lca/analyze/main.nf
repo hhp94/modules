@@ -24,7 +24,7 @@ process SAM2LCA_ANALYZE {
     script:
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
-    def make_db = database ? "" : "mkdir sam2lca_db"
+    def make_db = database ? "" : "mkdir -p sam2lca_db"
     def database = database ? "${database}" : "sam2lca_db"
     """
     $make_db

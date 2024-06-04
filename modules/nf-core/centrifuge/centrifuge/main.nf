@@ -44,7 +44,7 @@ process CENTRIFUGE_CENTRIFUGE {
     ## make a directory for placing the pipe files in somewhere other than default /tmp
     ## otherwise get pipefile name clashes when multiple centrifuge runs on same node
     ## use /tmp at the same time
-    mkdir ./temp
+    mkdir -p ./temp
 
     centrifuge \\
         -x \$db_name \\

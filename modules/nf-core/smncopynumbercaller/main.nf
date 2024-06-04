@@ -42,7 +42,7 @@ process SMNCOPYNUMBERCALLER {
     def prefix = task.ext.prefix ?: "${meta.id}"
     def VERSION = "1.1.2"
     """
-    mkdir out
+    mkdir -p out
     touch out/${prefix}.tsv
     touch out/${prefix}.json
 

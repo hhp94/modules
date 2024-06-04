@@ -39,7 +39,7 @@ process KMCP_INDEX {
     def args = task.ext.args ?: ''
     prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     touch ${prefix}.log
 
     cat <<-END_VERSIONS > versions.yml

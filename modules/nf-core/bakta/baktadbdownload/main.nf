@@ -33,7 +33,7 @@ process BAKTA_BAKTADBDOWNLOAD {
         download \\
         $args"
 
-    mkdir db
+    mkdir -p db
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

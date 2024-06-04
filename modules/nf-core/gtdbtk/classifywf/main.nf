@@ -37,7 +37,7 @@ process GTDBTK_CLASSIFYWF {
     """
     export GTDBTK_DATA_PATH="\${PWD}/database"
     if [ ${pplacer_scratch} != "" ] ; then
-        mkdir pplacer_tmp
+        mkdir -p pplacer_tmp
     fi
 
     gtdbtk classify_wf \\

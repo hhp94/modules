@@ -80,7 +80,7 @@ process STARSOLO {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${prefix}.Solo.out/
+    mkdir -p ${prefix}.Solo.out/
     touch ${prefix}.Solo.out/Log.final.out
     touch ${prefix}.Solo.out/Log.out
     touch ${prefix}.Solo.out/Log.progress.out

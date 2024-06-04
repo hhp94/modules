@@ -46,8 +46,8 @@ process CELLRANGER_MKVDJREF {
 
     stub:
     """
-    mkdir ${reference_name}
-    mkdir ${reference_name}/fasta
+    mkdir -p ${reference_name}
+    mkdir -p ${reference_name}/fasta
     echo stub > ${reference_name}/fasta/regions.fa
     echo stub > ${reference_name}/reference.json
 

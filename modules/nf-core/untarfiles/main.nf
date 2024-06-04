@@ -23,7 +23,7 @@ process UNTARFILES {
     prefix    = task.ext.prefix ?: ( meta.id ? "${meta.id}" : archive.baseName.toString().replaceFirst(/\.tar$/, ""))
 
     """
-    mkdir $prefix
+    mkdir -p $prefix
 
     tar \\
         -C $prefix \\
@@ -41,7 +41,7 @@ process UNTARFILES {
     stub:
     prefix    = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir $prefix
+    mkdir -p $prefix
     touch ${prefix}/file.txt
 
     cat <<-END_VERSIONS > versions.yml

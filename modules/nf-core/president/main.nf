@@ -29,7 +29,7 @@ process PRESIDENT {
     }
 
     """
-    mkdir output
+    mkdir -p output
     president \\
         --query $fasta \\
         --reference $reference \\

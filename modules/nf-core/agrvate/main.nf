@@ -36,7 +36,7 @@ process AGRVATE {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir ${fasta.baseName}-results
+    mkdir -p ${fasta.baseName}-results
     touch ${fasta.baseName}-results/${fasta.baseName}-summary.tab
 
     cat <<-END_VERSIONS > versions.yml

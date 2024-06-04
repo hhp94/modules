@@ -32,7 +32,7 @@ process FQTK {
     read_structures = fastq_readstructure_pairs.collect{it[1]}.join(" ")
 
     """
-    mkdir output
+    mkdir -p output
     fqtk \\
         demux \\
             --inputs ${fastqs} \\

@@ -50,7 +50,7 @@ process FAQCS {
 
         # Debug: collect all debug files in one directory (--debug)
         if [[ -f ${prefix}.base.matrix ]]; then
-            mkdir debug
+            mkdir -p debug
             mv *.{base,for_qual_histogram,length_count,quality}*.* debug
         fi
 
@@ -103,7 +103,7 @@ process FAQCS {
 
         # Debug: collect all debug files in one directory (--debug)
         if [[ -f ${prefix}.base.matrix ]]; then
-            mkdir debug
+            mkdir -p debug
             mv *.{base,for_qual_histogram,length_count,quality}*.* debug
         fi
 
@@ -123,7 +123,7 @@ process FAQCS {
     touch "${prefix}.log"
     echo "" | gzip > "${prefix}.discard.fastq.gz"
     echo "" | gzip > "${prefix}.trimmed.unpaired.fastq.gz"
-    mkdir debug
+    mkdir -p debug
     touch "debug/${prefix}.for_qual_histogram.txt"
 
     cat <<-END_VERSIONS > versions.yml

@@ -25,7 +25,7 @@ process ELPREP_MERGE {
 
     """
     # create directory and move all input so elprep can find and merge them before splitting
-    mkdir input
+    mkdir -p input
     mv ${bam} input/
 
     elprep merge \\

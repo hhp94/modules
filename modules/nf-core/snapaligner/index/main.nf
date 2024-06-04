@@ -23,7 +23,7 @@ process SNAPALIGNER_INDEX {
     def nonaltcontigfile_arg = nonaltcontigfile ? '-nonAltContigFile ' + nonaltcontigfile : ''
     def altliftoverfile_arg = altliftoverfile ? '-altLiftoverFile ' + altliftoverfile : ''
     """
-    mkdir snap
+    mkdir -p snap
 
     snap-aligner \\
         index \\
@@ -42,7 +42,7 @@ process SNAPALIGNER_INDEX {
     """
     stub:
     """
-    mkdir snap
+    mkdir -p snap
     echo "Genome" > snap/Genome
     echo "GenomeIndex" > snap/GenomeIndex
     echo "GenomeIndexHash" > snap/GenomeIndexHash

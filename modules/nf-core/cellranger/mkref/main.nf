@@ -45,7 +45,7 @@ process CELLRANGER_MKREF {
     }
     def args = task.ext.args ?: ''
     """
-    mkdir $reference_name
+    mkdir -p $reference_name
     touch ${reference_name}/empty_file
 
     cat <<-END_VERSIONS > versions.yml

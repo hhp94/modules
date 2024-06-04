@@ -21,7 +21,7 @@ process LAST_LASTDB {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir lastdb
+    mkdir -p lastdb
     lastdb \\
         $args \\
         -P $task.cpus \\

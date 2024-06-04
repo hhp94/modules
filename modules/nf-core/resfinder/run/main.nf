@@ -66,7 +66,7 @@ process RESFINDER_RUN {
     stub:
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    mkdir resfinder_kma
+    mkdir -p resfinder_kma
     touch ${prefix}.json \\
         pheno_table.txt \\
         ResFinder_Hit_in_genome_seq.fsa \\

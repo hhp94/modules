@@ -26,7 +26,7 @@ process ANNOTSV_INSTALLANNOTATIONS {
 
     stub:
     """
-    mkdir AnnotSV_annotations
+    mkdir -p AnnotSV_annotations
     touch AnnotSV_annotations/stub_file.txt
 
     cat <<-END_VERSIONS > versions.yml

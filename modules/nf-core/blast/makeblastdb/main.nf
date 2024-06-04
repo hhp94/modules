@@ -30,7 +30,7 @@ process BLAST_MAKEBLASTDB {
     makeblastdb \\
         -in ${fasta_name} \\
         ${args}
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     mv ${fasta_name}* ${prefix}
 
     cat <<-END_VERSIONS > versions.yml
@@ -54,7 +54,7 @@ process BLAST_MAKEBLASTDB {
     touch ${fasta_name}.fasta.nsq
     touch ${fasta_name}.fasta.ntf
     touch ${fasta_name}.fasta.nto
-    mkdir ${prefix}
+    mkdir -p ${prefix}
     mv ${fasta_name}* ${prefix}
 
     cat <<-END_VERSIONS > versions.yml
